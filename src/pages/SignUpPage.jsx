@@ -12,8 +12,18 @@ const roles = [
   { id: 6, name: "Other" },
 ];
 
+const avatars = [
+  { id: 1, name: "indigo" },
+  { id: 2, name: "blue" },
+  { id: 3, name: "cyan" },
+  { id: 4, name: "violet" },
+  { id: 5, name: "orange" },
+  { id: 6, name: "yellow" },
+  { id: 7, name: "green" },
+];
 export default function SignUpPage() {
   const [selected, setSelected] = useState(roles[0]);
+  const [avatar, setAvatar] = useState(avatars[0]);
   return (
     <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
       <div className='sm:mx-auto sm:w-full sm:max-w-lg'>
@@ -83,6 +93,11 @@ export default function SignUpPage() {
                       className='block font-semibold px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary outline-none sm:text-sm sm:leading-6'
                     />
                   </div>
+                </div>
+                <div className='sm:col-span-12'>
+                  <span className='block text-sm font-medium leading-6 text-gray-900'>
+                    Select avatar type
+                  </span>
                 </div>
                 <div className='sm:col-span-12'>
                   <button
