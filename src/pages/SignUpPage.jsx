@@ -16,7 +16,7 @@ export default function SignUpPage() {
   const [selected, setSelected] = useState(roles[0]);
   return (
     <div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
-      <div className='sm:mx-auto sm:w-full sm:max-w-xl'>
+      <div className='sm:mx-auto sm:w-full sm:max-w-lg'>
         <div className=''>
           <h2 className='mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900'>
             Create your Bitwise account
@@ -36,6 +36,7 @@ export default function SignUpPage() {
                   <div className='mt-2'>
                     <input
                       type='text'
+                      placeholder='e.g. School workspace'
                       className='px-3 outline-none font-semibold block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-secondary sm:text-sm sm:leading-6'
                     />
                   </div>
@@ -58,6 +59,7 @@ export default function SignUpPage() {
                   <div className='mt-2'>
                     <input
                       id='email'
+                      placeholder='e.g. jondoe@example.com'
                       name='email'
                       type='email'
                       autoComplete='email'

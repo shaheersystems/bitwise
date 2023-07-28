@@ -7,10 +7,12 @@ import LandingPage from "./pages/LandingPage";
 import Dashboard from "./pages/Dashboard";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignUpPage";
+import { useAuth } from "./context/AuthContext";
 function App() {
+  const { isLoggedIn } = useAuth();
   return (
     <div className='App'>
-      <PublicNav />
+      {!isLoggedIn && <PublicNav />}
       <Routes>
         <Route path='/' element={<PublicRoutes />}>
           <Route path='/' element={<LandingPage />} />
